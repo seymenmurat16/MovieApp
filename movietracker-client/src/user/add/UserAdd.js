@@ -120,7 +120,6 @@ class UserAddForm extends Component {
                         message: 'MovieApp',
                         description: "You're successfully updated User.",
                       });
-                      this.props.form.resetFields();
                     }).catch(error => {
                         if(error.status === 409) {
                             notification.error({

@@ -22,9 +22,7 @@ class ImdbMovieAdd extends Component {
         }else{
             return <GoLogin />;
         }
-        if(this.props.currentUser ? this.props.currentUser.role !== "Admin" : true) {
-            return <UnAuthorized />;
-        }
+        
         const AntWrappedLoginForm = Form.create()(ImdbMovieAddForm)
         return (
             <div className="login-container">

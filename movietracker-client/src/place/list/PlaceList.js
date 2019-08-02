@@ -113,7 +113,7 @@ class PlaceList extends Component {
           }
           columns={[
                 {
-                  Header: "List Name",
+                  Header: "Place Name",
                   id: "name",
                   accessor: d => d.name,
                   filterMethod: (filter, row) =>
@@ -125,7 +125,7 @@ class PlaceList extends Component {
                   Header: 'Actions',
                     Cell: row => (
                         <div style={{textAlign:"center"}}>
-                           <Link to={`/places/` + row.original.id}><button type="button" class ="btn btn-primary btn-sm mr-2 ">Update</button></Link>
+                           <Link to={`/placeAdd/` + row.original.id}><button type="button" class ="btn btn-primary btn-sm mr-2 ">Update</button></Link>
                             <ButtonDanger id={row.original.id} clickHandler = {this.clickHandler}/>
                         </div>
                 )}: ""
